@@ -48,47 +48,11 @@ import sys
 import re
 
 def is_decimal_string(s):
-    # 匹配小数的正则表达式
     decimal_pattern = re.compile(r'^[+-]?\d*\.\d+$')
     return bool(decimal_pattern.match(s))
 
 def BMICalculator():
-    unit,height,weight = sys.argv[1:4]
-    unit = str(unit)
-    height = str(height)
-    weight = str(weight)
-    if not unit in ['metric','imperial']:
-        print('Your input is invalid!')
-        return
-    if not (height.isdigit() or is_decimal_string(height)) or not (weight.isdigit() or is_decimal_string(weight)):
-        print('Your input is invalid!')
-        return
-    height = float(height)
-    weight = float(weight)
-    BMI = 0.0
-
-    if unit=='metric':
-        BMI = weight/(height**2)
-    elif unit=='imperial':
-        BMI = 703.*weight/(height**2)
-    
-    if BMI<=16:
-        res = 'Severe Thinness'
-    elif BMI>16 and BMI<17:
-        res = 'Moderate Thinness'
-    elif BMI>17 and BMI<18.5:
-        res = 'Mild Thinness'
-    elif BMI>18.5 and BMI<25:
-        res = 'Normal'
-    elif BMI>25 and BMI<30:
-        res = 'Overweight'
-    elif BMI>30 and BMI<35:
-        res = 'Obese Class I'
-    elif BMI>35 and BMI<40:
-        res = 'Obese Class II'
-    elif BMI>40:
-        res = 'Obese Class III'
-    print(f'{BMI:.2f}\t{res}')
+    pass
 
 
 
