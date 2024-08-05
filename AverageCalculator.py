@@ -23,19 +23,7 @@ import sys
 # you can use sys.argv[1] to get the first input argument.
 # sys.argv[2] is the second argument, etc.
 def AverageCalculator():
-      first, second, thrid = sys.argv[1:4]
-      first = str(first)
-      second = str(second)
-      thrid = str(thrid)
-      if not first.isdigit() or not second.isdigit() or not thrid.isdigit():
-            print('Your input is invalid!')
-            return
-      else:
-            first = float(first)
-            second = float(second)
-            thrid = float(thrid)
-            average = (first+second+thrid)/3.0
-            print(f'Average:{average:.2f}')
+      pass
 
 
 if __name__=='__main__':
